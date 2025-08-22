@@ -161,6 +161,20 @@ class SideNav extends StatelessWidget {
             route: AppRouteConstants.help,
             currentPath: currentPath,
           ),
+          NavItemBuilder.build(
+            context: context,
+            icon: Icons.usb_rounded,
+            title: 'Patient Details',
+            route: AppRouteConstants.patient,
+            currentPath: currentPath,
+          ),
+          NavItemBuilder.build(
+            context: context,
+            icon: Icons.table_bar,
+            title: 'Dynamic Tables',
+            route: AppRouteConstants.table,
+            currentPath: currentPath,
+          ),
         ],
       ),
     );

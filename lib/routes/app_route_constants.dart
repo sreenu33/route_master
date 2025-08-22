@@ -10,5 +10,7 @@ class AppRouteConstants {
   static const profileSettings = '/profile/settings';
   static const reports = '/reports';
   static const help = '/help';
+  static const patient = '/patient';
+  static const table = '/table';
   static String userDetail(int id) => '$dashboard/user-detail/$id';
 }

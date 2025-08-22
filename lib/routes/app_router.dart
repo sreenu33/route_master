@@ -1,3 +1,5 @@
+import 'package:admin_site/components/table_column_config.dart';
+import 'package:admin_site/components/table_screen.dart';
 import 'package:admin_site/controllers/images_controller.dart';
 import 'package:admin_site/models/images_model.dart';
 import 'package:admin_site/pages/dashboard/user_datails_page.dart';
@@ -5,6 +7,7 @@ import 'package:admin_site/pages/edit_profile_page.dart';
 import 'package:admin_site/pages/help_page.dart';
 import 'package:admin_site/pages/image_detail_page.dart';
 import 'package:admin_site/pages/images_page.dart';
+import 'package:admin_site/pages/patient/patient_page.dart';
 import 'package:admin_site/pages/reports_page.dart';
 import 'package:admin_site/pages/settings_page.dart';
 import 'package:admin_site/pages/view_profile_page.dart';
@@ -92,6 +95,16 @@ final router = GoRouter(
         GoRoute(
           path: AppRouteConstants.help,
           builder: (context, state) => const HelpPage(),
+        ),
+        GoRoute(
+          path: AppRouteConstants.patient,
+          builder: (context, state) => const PatientPage(),
+        ),
+        GoRoute(
+          path: AppRouteConstants.table,
+          builder: (context, state) {
+            return TableScreen(data: dummyRows, columns: dummyColumns);
+          },
         ),
       ],
     ),
